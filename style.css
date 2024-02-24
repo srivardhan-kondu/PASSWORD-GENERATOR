@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268, 47%, 21%);
+    --lt-violet2: hsl(281, 89%, 26%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+  
+    --vb-yellow: hsl(52, 100%, 62%);
+  
+  
+    --pl-white: hsl(0, 0%, 100%);
+  
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+    --dk-text: hsl(198, 20%, 13%);
+}
+body{
+display: flex;
+width: 100vw;
+height: 100vh;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ background: linear-gradient(180deg, var(--lt-violet) 0%, var(--dk-violet) 100%);
+}
+.container{
+ width: 90%;
+ max-width: 450px;
+}
+h1{
+    color: var(--pl-white);
+    font-size: 2.23rem;
+    margin-bottom: 1rem;
+    opacity: 0.75;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+.display-container{
+ position: relative;
+ background-color: var(--dk-violet);
+ border-radius: 5px;
+ border-bottom:0.35 solid var(--lt-violet) ;
+ margin: 1rem 0;
+ padding-top: 0.35rem;
+ /* height: 80px; */
+}
+.display{
+ width: 100%;
+background-color: transparent;
+padding: 1.15rem 1rem;
+color: ar(--vb-yellow);
+font-weight: 600;
+font-size: 1.5rem;
+line-height: 30px;
+letter-spacing: 1px;
+padding-right: 3.25rem;
+font-size: 1.5rem;
+border: none; 
+color: var(--vb-yellow);
+}
+.display::placeholder{
+ position: absolute;
+ top:50%;
+ left: 1.5rem;
+ line-height: 30px;
+ color: var(--vb-yellow);
+ opacity: 0.65;
+ text-transform: uppercase;
+ margin-top: -15px;
+}
+.display-container button{
+ position: absolute;
+ height: 68px;
+ width: 90px;
+ right: 0;
+ background-color: var(--dk-violet);
+ border: none;
+ cursor: pointer;
+}
+
+.input-container{
+ width: 100%;
+ background-color: var(--dk-violet);
+ border-radius: 1rem;
+ padding: 2rem;
+ border-bottom: 0.35rem solid var(--lt-violet);
+ 
+
+}
+.length-container{
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+
+}
+.length-container p:nth-child(1)
+{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 15px
+}
+.length-container p:nth-child(2)
+{
+    color: var(--vb-yellow);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.strength-container{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 1.75rem;
+ margin-bottom: 2rem;
+}
+.strength-container p:nth-child(1){
+    font-size: 1.5rem;
+    color: var(--pl-white);
+    font-weight: 500;
+}
+.indicator{
+ width: 1.5rem;
+ height: 1.5rem;
+ border-radius: 50%;
+}
+.generateButton{
+ background-color: var(--lt-violet2);
+ color: var(--vb-yellow);
+ height: 60px;
+width: 80%;
+font-size: 1.2rem;
+font-weight: 600;
+margin-left: 49px;
+border-radius: 10px;
+border: none;
+border-bottom: 0.1rem solid var(--vb-yellow);
+}
+.generateButton:hover{
+ background-color: var(--vb-yellow);
+ color: var(--dk-violet);
+}
+.check{
+ display: flex;
+ align-items: center;
+ font-weight: 300;
+ color: var(--pl-white);
+ font-size: 1.5rem;
+ gap: 0 1rem ;
+}
+.check input{
+ width: 20px;
+ height: 20px;
+ appearance: none;
+ border: 1px solid var(--vb-cyan);
+ cursor: pointer;
+ position: relative;
+ border-radius: 0.35rem;
+}
+.check input:checked{
+ background-color: var(--vb-cyan);
+}
+.check input:checked::before{
+content: '';
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 0.5rem;
+ height: 0.5rem;
+ background-color: var(--pl-white);
+ border-radius: 50%; 
+}
+/* .slider{
+ position: relative;
+ width: 80%;
+ height: 4rem;
+ background-color: transparent;
+ border-radius: 0.35rem;
+} */
+.slider input[type="range"] {
+ /* This targets the range input within the .slider */
+ width: 100%; /* Ensure the range input takes up the full width */
+ height: 1rem; /* Increase the height to increase thickness */
+ -webkit-appearance: none; /* Remove default styles */
+ appearance: none;
+ background-color: transparent; /* Set the background color of the track to transparent */
+}
+
+.slider input[type="range"]::-webkit-slider-runnable-track {
+ /* This targets the track of the range input */
+ background-color: pink; /* Change the color of the track */
+ height: 100%; /* Set the height of the track */
+ border-radius: 0.5rem; /* Apply border-radius to match .slider */
+}
+
+.target{
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ width: 70px;
+ height: 1.2rem;
+ columns: var(--pl-white);
+ border-radius: 0.5rem;
+ color: var(--pl-white);
+ right: 60px;
+ font-weight: 700;
+ font-size: 17px;
+}
